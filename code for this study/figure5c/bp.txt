@@ -1,0 +1,21 @@
+Pathway,Total,Expected,Hits,Pval,FDR
+mitotic cell cycle,968,98.6,165,7.96e-12,4.28e-10
+cell division,507,51.7,102,8.56e-12,4.28e-10
+mitosis,420,42.8,86,1.54e-10,5.13e-09
+M phase of mitotic cell cycle,447,45.6,87,1.73e-09,4.32e-08
+cell cycle phase,1070,109,166,1.31e-08,2.62e-07
+regulation of cell cycle,886,90.3,142,1.77e-08,2.95e-07
+interphase of mitotic cell cycle,435,44.3,82,2.32e-08,3.31e-07
+G1/S transition of mitotic cell cycle,209,21.3,48,4.85e-08,5.94e-07
+interphase,443,45.1,82,5.35e-08,5.94e-07
+cell cycle process,1420,144,201,2.98e-07,2.98e-06
+chromosome segregation,174,17.7,39,1.65e-06,1.5e-05
+cell cycle,1860,190,248,2.02e-06,1.68e-05
+cell cycle arrest,428,43.6,74,3.48e-06,2.63e-05
+negative regulation of cell cycle,520,53,86,3.68e-06,2.63e-05
+positive regulation of cell cycle,113,11.5,28,6.36e-06,4.24e-05
+cell cycle checkpoint,281,28.6,52,1.47e-05,8.65e-05
+chromatin remodeling,111,11.3,25,0.000107,0.000535
+mitotic sister chromatid segregation,54,5.5,15,0.00023,0.00105
+DNA replication,346,35.3,56,0.000315,0.00131
+aging,197,20.1,36,0.000372,0.00145

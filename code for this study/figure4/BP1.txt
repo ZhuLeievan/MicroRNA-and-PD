@@ -1,0 +1,11 @@
+Pathway,Total,Expected,Hits,Pval,FDR
+positive regulation of metabolic process,2690,35.4,65,2.06e-07,2.06e-05
+positive regulation of cellular metabolic process,2530,33.2,61,6.05e-07,3.02e-05
+intracellular steroid hormone receptor signaling pathway,113,1.49,9,1.8e-05,0.000138
+protein phosphorylation,1480,19.5,38,4.32e-05,0.000249
+regulation of protein phosphorylation,987,13,28,9.32e-05,0.000375
+regulation of programmed cell death,1550,20.4,37,0.000242,0.000634
+regulation of apoptotic process,1540,20.2,36,0.000403,0.00084
+regulation of kinase activity,743,9.78,21,0.000785,0.00127
+aging,197,2.59,9,0.0012,0.00158
+regulation of protein metabolic process,1820,24,39,0.00137,0.00176

@@ -1,0 +1,11 @@
+Pathway,Total,Expected,Hits,Pval,FDR
+transcription factor complex,303,3.71,15,5.03e-06,0.000503
+nucleoplasm part,910,11.1,27,1.81e-05,0.000905
+nucleoplasm,1820,22.3,40,0.000176,0.00587
+ruffle,135,1.65,7,0.00137,0.0334
+pore complex,103,1.26,6,0.00167,0.0334
+nuclear lumen,2690,32.9,49,0.00222,0.037
+cell leading edge,283,3.46,10,0.00261,0.0372
+nuclear envelope,387,4.74,12,0.00298,0.0372
+nuclear part,3330,40.8,57,0.00375,0.0417
+organelle envelope,1110,13.6,24,0.00494,0.0494

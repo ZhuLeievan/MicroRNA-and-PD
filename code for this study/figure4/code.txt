@@ -1,0 +1,14 @@
+a <- read.delim("./BP1.txt", header = T, sep = ",")
+a$ratio <- a$Hits/a$Total
+a <- a[order(a$ratio, decreasing = FALSE), ]
+a$Pathway <- factor(a$Pathway, levels = a$Pathway)
+
+p <- ggplot(a, aes(Pathway, ratio)) +
+  geom_point(aes(size = Hits, color = Pval)) +
+  scale_size(range = c(3, 6)) +
+  scale_color_gradient(high = '#156007', low = '#f46f20') +
+  theme(panel.background = element_rect(color = 'black', fill = 'transparent'), ) +theme_bw()+
+  coord_flip() +
+  labs(x = '', y = 'Gene ratio')
+
+p

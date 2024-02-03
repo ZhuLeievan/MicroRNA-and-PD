@@ -1,0 +1,55 @@
+library(UpSetR)
+a <- read.csv("./Supplementary data .csv",header = T)
+pdall <- a %>% dplyr::filter(PD.phenotype=='PD both sex')
+pdall$pdall <- 1
+pdall <- pdall[,c(1,13)]
+
+pdmale <- a %>% dplyr::filter(PD.phenotype=='PD male')
+pdmale$pdmale <- 1
+pdmale <- pdmale[,c(1,13)]
+
+pdfemale <- a %>% dplyr::filter(PD.phenotype=='PD female')
+pdfemale$pdfemale <- 1
+pdfemale <- pdfemale[,c(1,13)]
+
+pdbinary <- a %>% dplyr::filter(PD.phenotype=='PD motor subtypes(binary)')
+pdbinary$pdbinary <- 1
+pdbinary <- pdbinary[,c(1,13)]
+
+pdcont <- a %>% dplyr::filter(PD.phenotype=='PD motor subtypes(cont)')
+pdcont$pdcont <- 1
+pdcont <- pdcont[,c(1,13)]
+
+pdage <- a %>% dplyr::filter(PD.phenotype=='age at onset of PD')
+pdage$pdage <- 1
+pdage <- pdage[,c(1,13)]
+
+pdrate <- a %>% dplyr::filter(PD.phenotype=='rate of progression to PD dementia')
+pdrate$pdrate <- 1
+pdrate <- pdrate[,c(1,13)]
+
+abc <- c('pdall','pdmale','pdfemale','pdbinary','pdcont','pdage','pdrate')
+
+merge <- Reduce(function(x,y) merge(x,y,by="exposure",all=TRUE),list(pdall,pdmale,pdfemale,pdbinary,pdcont,pdage,pdrate),accumulate =FALSE)
+
+merge[is.na(merge)]=0
+
+list(list(query=intersects,
+          params=list("pdfemale","pdcont","pdbinary","pdall"),
+          active=T,
+          color="firebrick2")) -> queries
+
+upset(merge, 
+      nset = 7, 
+      nintersects = 900, 
+      order.by = c('degree','freq'),
+      decreasing = c(FALSE, TRUE),
+      mb.ratio = c(0.7, 0.3),
+      point.size = 3.0,
+      line.size = 0.8, 
+      mainbar.y.label = "Intersection size", 
+      sets.x.label = "Set Size", 
+      main.bar.color = "#f46f20",
+      matrix.color = '#225EA8', #½»µãÑÕÉ«
+      sets.bar.color = "#156007",
+      queries = queries)

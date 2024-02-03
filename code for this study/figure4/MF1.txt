@@ -1,0 +1,11 @@
+Pathway,Total,Expected,Hits,Pval,FDR
+transcription factor binding,509,6.4,22,4.36e-07,3.96e-05
+receptor signaling protein activity,110,1.38,9,1e-05,0.000333
+chromatin binding,338,4.25,15,2.43e-05,0.000552
+hormone receptor binding,176,2.21,9,0.000386,0.00483
+transcription coactivator activity,312,3.92,12,0.00059,0.0059
+adenyl nucleotide binding,1530,19.2,33,0.00137,0.00824
+purine nucleotide binding,1900,23.9,36,0.00715,0.0275
+cytokine activity,220,2.77,7,0.0213,0.0673
+nucleotide binding,2470,31.1,42,0.0221,0.0673
+kinase binding,418,5.25,10,0.0386,0.0965

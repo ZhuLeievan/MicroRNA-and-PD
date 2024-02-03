@@ -1,0 +1,11 @@
+Pathway,Total,Expected,Hits,Pval,FDR
+Diabetes Mellitus,53,0.721,4,0.00555,0.0136
+Distal amyotrophy,29,0.395,3,0.00683,0.0136
+Degenerative polyarthritis,64,0.871,4,0.0108,0.0136
+Muscle weakness of limb,12,0.163,2,0.011,0.0136
+Action Tremor,12,0.163,2,0.011,0.0136
+Spinal muscular atrophy-Jerash type,1,0.0136,1,0.0136,0.0136
+AMYOTROPHIC LATERAL SCLEROSIS 16-JUVENILE,1,0.0136,1,0.0136,0.0136
+PARKINSON DISEASE 8 (disorder),1,0.0136,1,0.0136,0.0136
+Constrictive median neuropathy,1,0.0136,1,0.0136,0.0136
+Bulbospinal Neuronopathy,1,0.0136,1,0.0136,0.0136

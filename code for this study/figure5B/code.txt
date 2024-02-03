@@ -1,0 +1,54 @@
+a <- read.csv("./for hot.csv",header = T)
+a[a==0] <- NA
+library(reshape2)
+
+
+ht <- melt(a,
+           id.vars="exposure",
+           value.name="beta",
+           na.rm = F)
+
+ht2 <- melt(a,
+            id.vars="exposure",
+            value.name="beta",
+            na.rm = T)
+
+colnames(ht)[1:2] <- c("microRNAs","PD related outcome")
+
+head(ht,12)
+
+
+ht$microRNAs <- factor(ht$microRNAs,
+                     levels = rev(unique(ht$microRNAs)),
+                     ordered = T)
+ht$`PD related outcome` <- factor(ht$`PD related outcome`,
+                       levels = unique(ht$`PD related outcome`),
+                       ordered = T)
+
+library(ggplot2)
+£»
+p1 <- ggplot(ht, aes(`PD related outcome`,microRNAs)) +
+  geom_tile(aes(fill = beta),size=0.5,
+            colour = "white")
+p1
+
+p2 <- p1+scale_fill_gradient(low = "#156007",
+                             high = "#f46f20",
+                             na.value = "grey92")
+p2
+
+p3 <- p2 + theme(axis.text.x = element_text(angle = 90,hjust=1,vjust = 0.5),
+                 panel.background = element_blank())
+p3
+p4 <- p3+scale_x_discrete(position = "top")+
+  theme(axis.text.x.top = element_text(angle = 90,face = "italic",
+                                       hjust=0,vjust = 0.5),
+        panel.background = element_blank())
+p4
+
+
+
+
+
+
+

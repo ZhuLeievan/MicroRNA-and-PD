@@ -1,0 +1,7 @@
+mydata2 <- read.csv("./twomirna_harmonise.csv", header = T)
+res2 <- read.csv("./twomirna_results.csv", header = T)
+p2 <- mr_scatter_plot(res2, mydata2)
+p2
+res_loo <- mr_leaveoneout(mydata2)
+p3 <- mr_leaveoneout_plot(res_loo)
+p3
